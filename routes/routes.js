@@ -44,7 +44,7 @@ router.post("/login", (req, res) => {
   });
 });
 
-// json web token fetch user
+// json web token fetch users
 router.post("/jwt_fetchUser", verifyToken, (req, res) => {
   jwt.verify(req.token, "secretKey", (err, authData) => {
     if (err) {
